@@ -100,7 +100,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot) return;
 
-  console.log(`Message received from ${message.author.tag}: "${message.content}"`);
+  console.log(`Message received from ${message.author.tag}`);
 
   if (message.content.toLowerCase().includes("fish")) {
     console.log(`Fish detected in message from ${message.author.tag}, reacting with 🐟`);
