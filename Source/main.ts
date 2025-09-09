@@ -55,7 +55,7 @@ const helpCommand: Command = {
     await interaction.reply({
       embeds: [{
         title: 'Fish',
-        description: 'Hello! I\'m a fish bot <a:fish:1415001962763649176>\n\nI automatically react with the <a:fish:1415001962763649176> emoji when someone mentions "fish" in their message!\n\nThat\'s all I do for now!',
+        description: 'Hello! I\'m a fish bot <a:fish:1415001962763649176>\n\nI automatically react with the <a:fish:1415001962763649176> emoji when someone mentions "fish" in their message!\n\nThat\'s all I do',
         color: 0x0099ff
       }]
     });
