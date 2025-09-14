@@ -47,7 +47,6 @@ const client = new Client({
       {
         name: "Fish",
         type: ActivityType.Watching,
-        url: "https://spicylyrics.org",
         state: "Looking for fishes 🐟"
       }
     ]
