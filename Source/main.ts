@@ -9,7 +9,8 @@ import {
   ContextMenuCommandBuilder,
   MessageContextMenuCommandInteraction,
   Events,
-  MessageFlags
+  MessageFlags,
+  ActivityType
 } from "discord.js";
 
 
@@ -41,6 +42,16 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessageReactions,
   ],
+  presence: {
+    activities: [
+      {
+        name: "Fish",
+        type: ActivityType.Watching,
+        url: "https://spicylyrics.org",
+        state: "Looking for fishes 🐟"
+      }
+    ]
+  }
 });
 
 // Initialize commands collection
