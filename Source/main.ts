@@ -108,7 +108,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 });
 
 client.on(Events.MessageCreate, async (message) => {
-  if (message.author.bot) return;
+  if (message.author.bot && message.author.id !== "1031537502017826826") return;
 
   console.log(`Message received from ${message.author.tag}`);
 
