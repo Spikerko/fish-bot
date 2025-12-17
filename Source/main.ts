@@ -113,9 +113,7 @@ client.on(Events.MessageCreate, async (message) => {
   console.log(`Message received from ${message.author.tag}`);
 
   if (message.content.toLowerCase().includes("fish")) {
-    console.log(`Fish detected in message from ${message.author.tag}, reacting with 🐟`);
     await message.react("1415001962763649176");
-    console.log(`Successfully reacted to message from ${message.author.tag}`);
   }
 })
 
