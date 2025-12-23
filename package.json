@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node dist/main.js",
     "dev": "nodemon --watch Source --ext ts --exec ts-node Source/main.ts",
-    "build": "tsc",
-    "preinstall": "node preinstall.js"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
