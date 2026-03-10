@@ -111,10 +111,14 @@ client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot && message.author.id !== "1031537502017826826") return;
 
   const isTargetGuildAndUser = message.guildId === "1369992682214264993" && message.author.id === "846490523509194822";
-  const containsTargetId = message.content.includes("846490523509194822");
+  const containsTargetId = message.content.toLowerCase().includes("846490523509194822");
 
-  if (isTargetGuildAndUser || containsTargetId) {
+  if (isTargetGuildAndUser || containsTargetId || message.content.toLowerCase().includes("<3")) {
     await message.react("💖");
+  }
+
+  if (message.content.toLowerCase().includes("</3") || message.content.toLowerCase().includes("<\\3")) {
+    await message.react("💔")
   }
 
   if (message.content.toLowerCase().includes("fish") || message.content.toLowerCase().includes("1065385839019958336")) {
