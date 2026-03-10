@@ -110,9 +110,13 @@ client.on(Events.InteractionCreate, async (interaction) => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot && message.author.id !== "1031537502017826826") return;
 
+  if (message.guildId === "1369992682214264993" && message.author.id === "846490523509194822") {
+    await message.react("💖");
+  }
+  
   if (message.content.toLowerCase().includes("fish") || message.content.toLowerCase().includes("1065385839019958336")) {
     await message.react("1415001962763649176");
   }
-})
+});
 
 client.login(process.env.DISCORD_TOKEN);
