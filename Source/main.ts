@@ -110,10 +110,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot && message.author.id !== "1031537502017826826") return;
 
-  const isTargetGuildAndUser = message.guildId === "1369992682214264993" && message.author.id === "846490523509194822";
   const containsTargetId = message.content.toLowerCase().includes("846490523509194822");
 
-  if (isTargetGuildAndUser || containsTargetId || message.content.toLowerCase().includes("<3")) {
+  if (containsTargetId || message.content.toLowerCase().includes("<3")) {
     await message.react("💖");
   }
 
