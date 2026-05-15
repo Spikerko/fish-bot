@@ -110,11 +110,19 @@ client.on(Events.InteractionCreate, async (interaction) => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot && message.author.id !== "1031537502017826826") return;
 
-  if (message.content.toLowerCase().includes("fish")) {
+  const containsTargetId = message.content.toLowerCase().includes("846490523509194822");
+
+  if (containsTargetId || message.content.toLowerCase().includes("<3")) {
+    await message.react("💖");
+  }
+
+  if (message.content.toLowerCase().includes("</3") || message.content.toLowerCase().includes("<\\3")) {
+    await message.react("💔")
+  }
+
+  if (message.content.toLowerCase().includes("fish") || message.content.toLowerCase().includes("1065385839019958336")) {
     await message.react("1415001962763649176");
   }
-})
-
-
+});
 
 client.login(process.env.DISCORD_TOKEN);
