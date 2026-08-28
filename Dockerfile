@@ -20,7 +20,7 @@ RUN chown bot-fish-njs:bot-fish-njs /usr/src/app
 USER bot-fish-njs
 
 # Copy package files with correct ownership
-COPY --chown=bot-fish-njs:bot-fish-njs package.json pnpm-lock.yaml ./
+COPY --chown=bot-fish-njs:bot-fish-njs package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies as non-root user (CRITICAL for security)
 # Any preinstall/postinstall scripts in packages run as bot-fish-njs, not root
